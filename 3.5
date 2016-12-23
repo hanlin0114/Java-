@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class test {
+  public static void main(String[] args){
+	  Scanner input = new Scanner(System.in);
+	  System.out.println("请输入年月：");
+	  int year = input.nextInt();
+	  int month = input.nextInt();
+    int day[] = {31,29,31,30,31,30,31,31,30,31,30,31};
+	  if((year%4 ==0 && year%100!=0)||(year%400 == 0)){
+		day[1] = 28;  
+	  }
+	  System.out.println(year + "年" + month + "月" + "有" + day[month-1] + "天。");
+  }
+}
+  
