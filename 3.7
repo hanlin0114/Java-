@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class test {
+  public static void main(String[] args){
+	  Scanner input = new Scanner(System.in);
+	  System.out.println("请输入数：");
+      int positiveNumber = 0;
+	  int negativeNumber = 0;
+	  double total = 0;
+	  double amount = 0;
+	  while(total>=-1){
+		  double x = input.nextDouble();
+		  if(x==0){
+			  System.out.println("这些数总和为：" + total + "\n" + "正数个数为：" + positiveNumber + "\n" + 
+					  "负数个数为：" + negativeNumber + "\n" + "平均值为：" + total/amount);
+			  System.exit(0);
+		  }
+		  else{
+			  if(x>0) positiveNumber++;
+			  if(x<0) negativeNumber++;
+			  total += x;
+			  amount++;
+		  }
+	  }
+  }
+}
