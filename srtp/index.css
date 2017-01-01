@@ -1,34 +1,61 @@
-html,body,div,img{
+html,body,div,img,p{
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
 	text-decoration: none;
-	background-color: #ffffff;
 }
 
 html,body{
 	height: 100%;
 }
 
+h1,h2,h3,h4,h5{
+	font-family: 华文细黑,宋体,Arial,sans-serif;
+	margin: 0px;
+}
 a{
 	text-decoration: none;
 }
-#pageOne,#pageTwo,#pageThree,#pageFour{
+
+#pageOne,#pageTwo,#pageThree{
 	height: 1080px;
 	width: 100%;
+	min-width: 1280px;
 	padding: 0;
 	margin: 0;
-	background-origin: border-box;
+}
+#pageTwo_word > a,#pageThree_content > a{
+	font-size: 30px;
+	color: #66ffff;
+	height:40px;
+}
+#pageTwo_word > a:hover{
+	color: #0066ff;
+}
+#index{
+	left:40%;
+}
+#download{
+	left:47%;
+}
+#connect{
+	left:54%;
+}
+
+#pageOne{
+	background-image: url(img/background1.jpg);
 }
 #pageOne_content{
 	position: absolute;
 	top: 0;
 	width: 100%;
+	height: 200px;
+	background-color: #ffffff;
 }
 #pageOne_content > a{
 	position: absolute;
 	top:0;
-	color: #000000;
+	color: #33cccc;
 	width:80px;
 	height:60px;
 	line-height: 60px;
@@ -43,29 +70,74 @@ a{
 	height:60px;
 	line-height: 60px;
 	text-align: center;
-	
 }
-#index{
-	left:40%;
-}
-#download{
-	left:50%;
-}
-#connect{
-	left:60%;
-}
-#pageOne{
-	background-image: url(img/background1.jpg);
+#pageOne_content > img {
+	background-color:transparent;
 }
 
 #pageTwo{
 	background-image: url(img/background2.jpg);
 }
+#pageTwo_content{
+	background-color:transparent;
+	height: 550px;
+}
+#pageTwo_content > img{
+	margin-left: 200px;
+	margin-top: -400px; 
+}
+#pageTwo_word{
+	height: 250px;
+	text-align: left;
+	margin-top: 150px;
+	padding-left: 700px;
+	background-color: #ffffff;
+}
+#pageTwo_word > h1,#pageThree_content > h1,#pageFour_content > h1{
+	margin-top: 40px;
+	font-size: 60px;
+}
+#pageTwo_word > p{
+	color:grey;
+}
 
 #pageThree{
 	background-image: url(img/background3.jpg);
 }
+#pageThree_content{
+	padding-left: 100px;
+	text-align: left;
+	height:450px;
+	background-color: #ffffff;
+}
+#pageThree_content + img{
+	margin-top: 20px;
+}
+#pageThreepic_right{
+	width: 400px;
+	height: 400px;
+	margin-top: -220px;
+	margin-left: 330px;
+}
 
-#pageFour{
-	background-image: url(img/background1.jpg);
+#pageFour_content{
+	margin-bottom: 30px;
+	padding-left: 100px;
+}
+#pageThree_content > p{
+	font-size: 16px;
+	color: grey;
+	line-height: 30px;	
+}
+
+#pageFour_content > p{
+	font-size: 16px;
+	color: grey;
+	line-height: 30px; 
+}
+
+#pageFour> img{
+	margin-top: -280px;
+	margin-left: 700px;
+	background-color: rgba(0,0,0,0);
 }
