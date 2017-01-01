@@ -9,37 +9,58 @@
    <section id="pageOne">
    <div id="pageOne_content">
   	<img src="img/headline.png">
-  	<a id="index" href="index.html">首页</a>
-  	<a id="download" href="download.html">下载</a>
-  	<a id="connect" href="connect.html">联系我们</a>
+  	<a id="index" href="index.html"><h3>首页</h3></a>
+  	<a id="download" href="download.html"><h3>下载</h3></a>
+  	<a id="connect" href="connect.html"><h3>联系我们</h3></a>
+  	<input type="text" id="test" value="000">
    </div>
    </section>
    <section id="pageTwo">
    <div id="pageTwo_content">
-   	<p>问答，是传承
+    <div id="pageTwo_word">
+   	<h1>问答，是传承</h1>
     <br/>
-    跨越千百年知识的传递
-    <br/>
-    无论何时何地，只要你有问题，只要找我，千百年的知识与你分享
-    </p>
+    <p>跨越千百年知识的传递</p>
+    <p>只要你有问题，我就在这，千百年的知识与你分享</p>
+    <a href="download.html">立即下载>></a>
+   </div>
+    <img src="img/img1.png">
    </div>
    </section>
    <section id="pageThree">
    <div id="pageThree_content">
-   	<p>问答，是交流
-       <br/>
-       超越距离的思想
-       <br/>
-       将全网络有价值的知识汇总，无论在任何时候，你都可以通过简单的方式检索
-   	</p>
+   	   <h1>问答，是交流</h1>
+   	   <br>
+       <p>穿越空间的思想</p>
+       <p>将全网络有价值的知识汇总，无论何时何地，你都能轻易检索</p>
+       <a href="download.html">立即下载>></a>
+       <br>
+       <img src="img/hands.png">
+       <img id="pageThreepic_right" src="img/door.jpg">
    </div>
    </section>
    <section id="pageFour">
    <div id="pageFour_content">
-    <p>问答，是人类进步最基本的方式
-    <br/>即使现在什么都不懂，你也不用担心，方位的知识体系，从无到有，都能为您提供。
-    </p>
+    <h1>问答，是突破</h1>
+    <br/>
+    <p>懂你所需，寻你想要</p>
+    <p>将知识碎串连起来，和你的奇思妙擦出火花</p>
+   </div>
+   <img src="img/brain.png">
    </section>
-  </div>
+   <script type="text/javascript">
+        var scrollFunc = function(){
+       	var box = document.getElementById("pageOne");
+       	var test = document.getElementById("test");
+       	test.value = box.getBoundingClientRect().top ;
+       }//显示对象距离当前窗口顶端距离
+       if(document.addEventListener){ 
+    document.addEventListener('DOMMouseScroll',scrollFunc,false); 
+    }//W3C 
+    window.onmousewheel=document.onmousewheel=scrollFunc;
+    window.onload = function(){
+    	alert(document.getElementById("pageFour_content").offsetTop);
+    }
+   </script>
   </body>
 </html>
