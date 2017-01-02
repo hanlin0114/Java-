@@ -16,7 +16,9 @@ h1,h2,h3,h4,h5{
 a{
 	text-decoration: none;
 }
-
+body{
+	background-image: url(img/background1.jpg);
+}
 #pageOne,#pageTwo,#pageThree{
 	height: 1080px;
 	width: 100%;
@@ -42,9 +44,10 @@ a{
 	left:54%;
 }
 
-#pageOne{
-	background-image: url(img/background1.jpg);
-}
+/*#pageOne{
+	background-image: url(img/background1.jpg),url(img/background3.jpg);
+	background-position: 0px -100px;
+}*/
 #pageOne_content{
 	position: absolute;
 	top: 0;
@@ -75,9 +78,9 @@ a{
 	background-color:transparent;
 }
 
-#pageTwo{
+/*#pageTwo{
 	background-image: url(img/background2.jpg);
-}
+}*/
 #pageTwo_content{
 	background-color:transparent;
 	height: 550px;
@@ -85,11 +88,11 @@ a{
 #pageTwo_content > img{
 	margin-left: 200px;
 	margin-top: -400px; 
+	display: block;
 }
 #pageTwo_word{
-	height: 250px;
+	height: 400px;
 	text-align: left;
-	margin-top: 150px;
 	padding-left: 700px;
 	background-color: #ffffff;
 }
@@ -102,7 +105,7 @@ a{
 }
 
 #pageThree{
-	background-image: url(img/background3.jpg);
+	/*background-image: url(img/background3.jpg);*/
 }
 #pageThree_content{
 	padding-left: 100px;
@@ -120,9 +123,13 @@ a{
 	margin-left: 330px;
 }
 
+#pageFour{
+	background-color: #ffffff;
+}
 #pageFour_content{
 	margin-bottom: 30px;
 	padding-left: 100px;
+	
 }
 #pageThree_content > p{
 	font-size: 16px;
@@ -141,4 +148,3 @@ a{
 	margin-left: 700px;
 	background-color: rgba(0,0,0,0);
 }
-//2017/1/1

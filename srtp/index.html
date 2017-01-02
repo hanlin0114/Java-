@@ -50,17 +50,23 @@
    </section>
    <script type="text/javascript">
         var scrollFunc = function(){
-       	var box = document.getElementById("pageOne");
+       	var box1 = document.getElementById("pageOne");
+       	var box2 = document.getElementById("pageTwo_content").getBoundingClientRect().top;
+       	var box3 = document.getElementById("pageThree_content").getBoundingClientRect().top;
        	var test = document.getElementById("test");
-       	test.value = box.getBoundingClientRect().top ;
+       	test.value = box1.getBoundingClientRect().top ;
+       	if(box3<=200){
+       		document.body.style.backgroundImage="url(img/background3.jpg)";
+       	}else if(box2<=200){
+       		document.body.style.backgroundImage="url(img/background2.jpg)";
+       	}else {
+       		document.body.style.backgroundImage="url(img/background1.jpg)";
+       	}
        }//显示对象距离当前窗口顶端距离
        if(document.addEventListener){ 
     document.addEventListener('DOMMouseScroll',scrollFunc,false); 
     }//W3C 
     window.onmousewheel=document.onmousewheel=scrollFunc;
-    window.onload = function(){
-    	alert(document.getElementById("pageFour_content").offsetTop);
-    }
    </script>
   </body>
 </html>
